@@ -31,7 +31,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-cyan-800 opacity-75 flex items-center justify-center z-500">
-      <div className="bg-white p-8 rounded-lg w-full max-w-md mx-4 md:mx-0 md:w-1/2 lg:w-1/3">
+      <div className="bg-white p-8 rounded-2xl w-full max-w-md mx-4 md:mx-0 md:w-1/2 lg:w-1/3">
         <div className="flex justify-between items-center">
           <h4 className="text-2xl font-bold">Leave a Review</h4>
           <IoCloseSharp
