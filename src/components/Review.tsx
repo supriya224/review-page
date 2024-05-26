@@ -1,5 +1,7 @@
+// src/components/Review.tsx
+"use client"
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
@@ -11,7 +13,9 @@ interface ReviewProps {
 const Review: React.FC<ReviewProps> = ({ onClose }) => {
   const [safetyRating, setSafetyRating] = useState(0);
   const [communicationRating, setCommunicationRating] = useState(0);
-  const [recommendation, setRecommendation] = useState<"like" | "dislike" | null>(null);
+  const [recommendation, setRecommendation] = useState<
+    "like" | "dislike" | null
+  >(null);
 
   const handleStarClick = (
     setRating: React.Dispatch<React.SetStateAction<number>>,
@@ -22,15 +26,18 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
 
   const handleRecommendationClick = (type: "like" | "dislike") => {
     setRecommendation(type);
-    console.log("clicked")
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg w-full max-w-md mx-4 md:mx-0 md:w-1/2 lg:w-1/3 ">
+    <div className="fixed inset-0 bg-cyan-800 opacity-75 flex items-center justify-center z-500">
+      <div className="bg-white p-8 rounded-lg w-full max-w-md mx-4 md:mx-0 md:w-1/2 lg:w-1/3">
         <div className="flex justify-between items-center">
           <h4 className="text-2xl font-bold">Leave a Review</h4>
-          <IoCloseSharp size={30} onClick={onClose} className="cursor-pointer" />
+          <IoCloseSharp
+            size={30}
+            onClick={onClose}
+            className="cursor-pointer"
+          />
         </div>
         <div className="my-4">
           <h3 className="text-xl font-bold">Safety</h3>
@@ -74,7 +81,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
           <div className="flex items-center gap-4">
             <span
               className={`flex items-center cursor-pointer ${
-                recommendation === "dislike" ? "text-red-500" : "text-gray-500"
+                recommendation === "dislike" ? "text-red-600" : "text-gray-500"
               }`}
               onClick={() => handleRecommendationClick("dislike")}
             >
@@ -82,7 +89,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
             </span>
             <span
               className={`flex items-center cursor-pointer ${
-                recommendation === "like" ? "text-green-500" : "text-gray-500"
+                recommendation === "like" ? "text-green-600" : "text-gray-500"
               }`}
               onClick={() => handleRecommendationClick("like")}
             >
@@ -98,5 +105,4 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
     </div>
   );
 };
-
 export default Review;
