@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import IMG from '../assest/img.png';
 
 const Header: React.FC = () => {
+  // use router for routing
   const router = useRouter();
 
   const handleReviewClick = () => {
@@ -15,7 +16,9 @@ const Header: React.FC = () => {
   return (
     <header className="">
       <div className="container mx-auto w-auto py-2 bg-transparent flex justify-between">
-        <Image alt="Logo" width={100} height={100} className="" src={IMG} />
+        {/* compnay logo */}
+        <Image alt="Logo" width={100} height={100} className="" src={IMG} /> 
+        {/* create a button for review */}
         <button type="button" onClick={handleReviewClick}>
           Review
         </button>

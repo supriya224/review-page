@@ -1,11 +1,12 @@
 // src/components/Review.tsx
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 
+// on close function
 interface ReviewProps {
   onClose: () => void;
 }
@@ -24,7 +25,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
     setRating(rating);
   };
 
-  const handleRecommendationClick = (type: "like" | "dislike") => {
+  const handleRecommendationClick = (type: "like" | "dislike") => { //handle like dislike button
     setRecommendation(type);
   };
 

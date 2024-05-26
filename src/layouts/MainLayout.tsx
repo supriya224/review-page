@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 
+// interface main component
 interface IMainComponent {
   children: ReactNode;
 }

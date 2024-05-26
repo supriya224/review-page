@@ -13,6 +13,7 @@ const ReviewPage: React.FC = () => {
 
   return (
     <div>
+      {/* review component import here */}
       <Review onClose={handleClose} />
     </div>
   );
