@@ -81,7 +81,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
           <div className="flex items-center gap-4">
             <span
               className={`flex items-center cursor-pointer ${
-                recommendation === "dislike" ? "text-red-600" : "text-gray-500"
+                recommendation === "dislike" ? "text-red-700" : "text-gray-500"
               }`}
               onClick={() => handleRecommendationClick("dislike")}
             >
@@ -89,7 +89,7 @@ const Review: React.FC<ReviewProps> = ({ onClose }) => {
             </span>
             <span
               className={`flex items-center cursor-pointer ${
-                recommendation === "like" ? "text-green-600" : "text-gray-500"
+                recommendation === "like" ? "text-green-700" : "text-gray-500"
               }`}
               onClick={() => handleRecommendationClick("like")}
             >
