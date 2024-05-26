@@ -10,6 +10,7 @@ const Header: React.FC = () => {
 
   const handleReviewClick = () => {
     setShowReview(true);
+    console.log("clicked")
   };
 
   const handleCloseReview = () => {
@@ -18,10 +19,10 @@ const Header: React.FC = () => {
 
   return (
     <MainLayout>
-      <header className="">
-        <div className=" container mx-auto w-auto  py-2 bg-transparent flex justify-between">
-          <Image alt="" width={100} height={100} className="" src={IMG} />
-          <button type="button" onClick={handleReviewClick}>
+      <header className="bg-orange-400 sm:bg-red-600 md:bg-yellow-500 lg:bg-blue-500 xl:bg-teal-500">
+        <div className="container mx-auto w-auto py-2 flex justify-between">
+          <Image alt="" width={100} height={100} className="w-auto h-auto" src={IMG} />
+          <button type="button" onClick={handleReviewClick} className=" cursor-pointer">
             Review
           </button>
         </div>
