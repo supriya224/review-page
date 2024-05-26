@@ -6,7 +6,7 @@ const nextConfig = {
         
     // }
     images: {
-        domains: ["ayuvya.com"],
+        domains: ["ayuvya.com","img.freepik.com"],
       },
 };
 
