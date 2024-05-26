@@ -1,10 +1,10 @@
 import Review from "@/components/core/Review";
-import Image from "next/image";
+import ReviewPage from "@/pages/review";
 
 export default function Home() {
   return (
-    <main >
-     <Review/>
+    <main>
+      <ReviewPage/>
     </main>
   );
 }
